@@ -1,0 +1,28 @@
+<form class="form-class" [formGroup]="loginForm">
+
+  <mat-form-field class="example-full-width">
+    <mat-label>User Login</mat-label>
+    <input matInput for="UserName" name="UserName" id="UserName" formControlName="username"
+           [ngClass]="{ 'is-invalid': loginForm.controls['username'].errors }">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input matInput for="Password" type="password" name="Password" id="Password" formControlName="password"
+           [ngClass]="{ 'is-invalid': loginForm.controls['password'].errors }">
+
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" (click)="login()">
+    <mat-icon *ngIf="loading"><mat-spinner color="accent" diameter="20">
+    </mat-spinner></mat-icon>
+    GET STARTED
+  </button>
+
+  <!-- Add this in your template where you want to display the error message -->
+  <div *ngIf="wrongLogin" class="error-message">
+    Invalid username or password
+  </div>
+
+</form>
+

@@ -1,0 +1,38 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row" style="display: flex;">
+        <div class="col-3">
+          <mat-form-field class="input-model">
+            <mat-label>Nom produit</mat-label>
+            <input matInput type="text" [(ngModel)]="produitModel.nomproduit" [disabled]="disabled">
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <mat-form-field class="input-model">
+            <mat-label>Prix</mat-label>
+            <input matInput type="number" [(ngModel)]="produitModel.prixproduit" [disabled]="disabled">
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <mat-form-field class="input-model">
+            <mat-label>Quantité</mat-label>
+            <input matInput type="number" [(ngModel)]="produitModel.qtproduit" [disabled]="disabled">
+          </mat-form-field>
+        </div>
+        <div class="col-3">
+          <mat-form-field class="input-model">
+            <mat-label>Remarques</mat-label>
+            <input matInput type="text" [(ngModel)]="produitModel.description" [disabled]="disabled">
+          </mat-form-field>
+        </div>
+
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-flat-button color="primary" type="button" (click)="updateDeleteProduit(produitModel)" >{{action}}</button>
+      <button mat-flat-button color="primary" type="button" style="margin-left: 20px;" (click)="cancelAdd()">Annuler</button>
+    </mat-card-actions>
+  </mat-card>

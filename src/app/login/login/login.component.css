@@ -1,0 +1,19 @@
+.form-class {
+  margin-top: 5%;
+  width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 40%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+

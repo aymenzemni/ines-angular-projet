@@ -1,0 +1,8 @@
+.btn-log-out {
+float: right;
+margin: 2% 7% 0 0 !important;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
